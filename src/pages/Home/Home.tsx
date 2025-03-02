@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react";
-import { Hero } from "../../components/ui/Hero/Hero";
-
+import { Hero } from "../../components/ui/Hero";
+import styles from './Home.module.css';
+import { CardProducts } from "../../components/ui/CardProducts";
 
 const Home = () => {
 
 
-  const [productos, setProducts] = useState([])
+  const [productos, setProductos] = useState([])
 
   const getProducts = async () => {
     try{
         const response = await fetch(`http://localhost:3000/products`)
         const data = await response.json()
-        setProducts(data)
+        setProductos(data)
     }
     
     catch (error) {
@@ -24,12 +25,19 @@ const Home = () => {
     getProducts()
   },[])
 
-  console.log(productos)
+
 
 
   return (
     <>
-    <Hero/>
+      <Hero/>
+      <div className={styles.container}>
+      {productos.map((producto) => (
+        
+          <CardProducts key ={producto.id} productos={producto}/>
+      ))}
+
+    </div>
     </>
   )
 }
