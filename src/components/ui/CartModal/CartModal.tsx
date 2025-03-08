@@ -11,16 +11,16 @@ export const CartModal = ({handleCartModal}) => {
             <thead>
                 <tr>
                     <th>
-                        Product
+                        Producto
                     </th>
-                    <th>Delete</th>
-                    <th>Quantity</th>
-                    <th>Add</th>
+                    <th>Borrar</th>
+                    <th>Cantidad</th>
+                    <th>Agregar</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Name</td>
+                    <td>Nombre</td>
                     <td><button className={styles.modalButtonRemove}>-1</button></td>
                     <td>12</td>
                     <td><button className={styles.modalButtonAgregar}>+1</button></td>
@@ -30,8 +30,8 @@ export const CartModal = ({handleCartModal}) => {
         <div>
             <h3>Total: 400,00</h3>
         </div>
-        <div>
-            <button className={styles.modalButtonContainer}>CheckOut</button>
+        <div className={styles.modalButtonContainer}>
+            <button >CheckOut</button>
         </div>
     </div>
   )
