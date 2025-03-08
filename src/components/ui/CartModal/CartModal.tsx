@@ -7,7 +7,7 @@ export const CartModal = ({handleCartModal}) => {
         <button className={styles.modalCloseButton} onClick={handleCartModal}>
             <img src={close} alt="Cerrar Cart Modal" />
         </button>
-        <table className={styles.modal}>
+        <table className={styles.modalTable}>
             <thead>
                 <tr>
                     <th>
@@ -23,7 +23,7 @@ export const CartModal = ({handleCartModal}) => {
                     <td>Name</td>
                     <td><button className={styles.modalButtonRemove}>-1</button></td>
                     <td>12</td>
-                    <td><button>+1</button></td>
+                    <td><button className={styles.modalButtonAgregar}>+1</button></td>
                 </tr>
             </tbody>
         </table>

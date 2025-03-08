@@ -7,7 +7,7 @@
 	justify-content: space-between;
 	padding: 10px;
 	position: absolute;
-	right: 0px;
+	right: 4px;
 	top: 0px;
 	z-index: 99999;
 }
@@ -23,19 +23,28 @@
 
 .modalCloseButton{
 	all: unset;
-  height: 20px;
+    height: 20px;
 	margin: 10px;
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 20px;
+	width: 10px;
+}
+
+.modalTable{
+    width: 100%;
+    text-size-adjust: 70%;
+    text-decoration: double;
+    text-align: center;
+    padding-right: 15px;
 }
 
 
-
-.modalButtonRemove{
-  margin: 0 auto;
+.modalButtonRemove, .modalButtonAgregar{
+    margin: 0 auto;
 	width: 100%;
+    background-color: #c4ee514b;
+    color: #fff;
 }
 
 .modalButtonContainer button{
